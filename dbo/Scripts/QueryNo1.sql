@@ -1,4 +1,5 @@
 ﻿-- OPTION 1
+
 SELECT ProgramUsers.id, ProgramUsers.FirstName, ProgramUsers.LastName, COUNT(*) AS UserQuestionsQty
 FROM ProgramUsers
 JOIN Questions ON Questions.UserId = ProgramUsers.id
@@ -8,6 +9,8 @@ HAVING COUNT(*) = (
 	FROM Questions
 	GROUP BY UserId
 	ORDER BY QuestionsQty DESC)
+
+
 
 -- OPTION 2
 
